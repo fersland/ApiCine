@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "U6kaKL3bNoaYQaqF7lQm6Yu3ml2GgCAkHwZcE4jndls=",
+  "Source": "csharp_apis_cinema",
+  "BasePath": "_content/csharp_apis_cinema",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
