@@ -19,6 +19,7 @@ namespace csharp_apis_cinema.Controllers
         }
 
         [HttpPost]
+        [Route("GuardarGenero")]
         public async Task<ActionResult> Guardar(GeneroDto model)
         {
             var response = await db.Generos.AnyAsync(x => x.Nombre == model.Nombre);
