@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using csharp_apis_cinema;
 
@@ -11,9 +12,11 @@ using csharp_apis_cinema;
 namespace csharp_apis_cinema.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230215160539_ClasePeliculaActor")]
+    partial class ClasePeliculaActor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -175,13 +178,13 @@ namespace csharp_apis_cinema.Migrations
             modelBuilder.Entity("csharp_apis_cinema.Entidades.PeliculaActor", b =>
                 {
                     b.HasOne("csharp_apis_cinema.Entidades.Actor", "Actor")
-                        .WithMany("PeliculasActores")
+                        .WithMany()
                         .HasForeignKey("ActorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("csharp_apis_cinema.Entidades.Pelicula", "Pelicula")
-                        .WithMany("PeliculasActores")
+                        .WithMany()
                         .HasForeignKey("PeliculaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -191,16 +194,9 @@ namespace csharp_apis_cinema.Migrations
                     b.Navigation("Pelicula");
                 });
 
-            modelBuilder.Entity("csharp_apis_cinema.Entidades.Actor", b =>
-                {
-                    b.Navigation("PeliculasActores");
-                });
-
             modelBuilder.Entity("csharp_apis_cinema.Entidades.Pelicula", b =>
                 {
                     b.Navigation("Comentarios");
-
-                    b.Navigation("PeliculasActores");
                 });
 #pragma warning restore 612, 618
         }
