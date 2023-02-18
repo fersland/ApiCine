@@ -12,10 +12,10 @@ namespace csharp_apis_cinema
             CreateMap<ActorDto, Actor>();
 
             CreateMap<PeliculaDto, Pelicula>()
-                .ForMember(ent => ent.Generos, dto => 
+                .ForMember(ent => ent.Generos, dto => // 
                 dto.MapFrom(campo => campo.Generos.Select(id => new Genero { Id = id })));
 
             CreateMap<PeliculaActorDto, PeliculaActor>();
         }
-    }
+    } 
 }

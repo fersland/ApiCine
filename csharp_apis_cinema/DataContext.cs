@@ -2,6 +2,7 @@
 using csharp_apis_cinema.Entidades;
 using Microsoft.EntityFrameworkCore.Metadata;
 using System.Runtime.CompilerServices;
+using System.ComponentModel.DataAnnotations;
 
 namespace csharp_apis_cinema
 {
@@ -21,7 +22,19 @@ namespace csharp_apis_cinema
             args.Entity<Actor>().HasKey(a => a.Id);
             args.Entity<Actor>().Property(a => a.Nombre).HasMaxLength(150);
 
+
             args.Entity<PeliculaActor>().HasKey(pa => new { pa.ActorId, pa.PeliculaId });
+            args.Entity<SistemaProgramador>().HasKey(sp => new { sp.ProgramadorId, sp.SistemaId });
+
+
+            args.Entity<Sistema>().HasKey(s => s.Id);
+            args.Entity<Sistema>().Property(s => s.Nombre).HasMaxLength(150);
+
+            args.Entity<Programador>().HasKey(p => p.Id);
+            args.Entity<Programador>().Property(p => p.Nombre).HasMaxLength(150);
+
+            args.Entity<Lenguaje>().HasKey(l => l.Id);
+            args.Entity<Lenguaje>().Property(l => l.Nombre).HasMaxLength(150);
         }
 
         public DbSet<Genero> Generos => Set<Genero>();
@@ -29,5 +42,10 @@ namespace csharp_apis_cinema
         public DbSet<Actor> Actores => Set<Actor>();
         public DbSet<Comentario> Comentarios => Set<Comentario>();
         public DbSet<PeliculaActor> PeliculasActores => Set<PeliculaActor>();
+
+        public DbSet<Programador> Programadores => Set<Programador>();
+        public DbSet<Sistema> Sistemas => Set<Sistema>();
+        public DbSet<Lenguaje> Lenguajes => Set<Lenguaje>();
+        public DbSet<SistemaProgramador> SistemasProgramadores => Set<SistemaProgramador>();
     }
 }
