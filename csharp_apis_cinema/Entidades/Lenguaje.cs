@@ -5,6 +5,6 @@
         public int Id { get; set; }
         public string Nombre { get; set; } = null!;
 
-        HashSet<Sistema> Sistemas { get; set; } = new HashSet<Sistema>();
+        public HashSet<Sistema> Sistemas { get; set; } = new HashSet<Sistema>();
     }
 }

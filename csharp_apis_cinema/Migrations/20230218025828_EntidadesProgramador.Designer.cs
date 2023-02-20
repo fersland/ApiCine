@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using csharp_apis_cinema;
 
@@ -11,9 +12,11 @@ using csharp_apis_cinema;
 namespace csharp_apis_cinema.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230218025828_EntidadesProgramador")]
+    partial class EntidadesProgramador
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,21 +38,6 @@ namespace csharp_apis_cinema.Migrations
                     b.HasIndex("PeliculasId");
 
                     b.ToTable("GeneroPelicula");
-                });
-
-            modelBuilder.Entity("LenguajeSistema", b =>
-                {
-                    b.Property<int>("LenguajesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SistemasId")
-                        .HasColumnType("int");
-
-                    b.HasKey("LenguajesId", "SistemasId");
-
-                    b.HasIndex("SistemasId");
-
-                    b.ToTable("LenguajeSistema");
                 });
 
             modelBuilder.Entity("csharp_apis_cinema.Entidades.Actor", b =>
@@ -230,9 +218,6 @@ namespace csharp_apis_cinema.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Orden")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Precio")
                         .HasColumnType("decimal(18,2)");
 
@@ -254,21 +239,6 @@ namespace csharp_apis_cinema.Migrations
                     b.HasOne("csharp_apis_cinema.Entidades.Pelicula", null)
                         .WithMany()
                         .HasForeignKey("PeliculasId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("LenguajeSistema", b =>
-                {
-                    b.HasOne("csharp_apis_cinema.Entidades.Lenguaje", null)
-                        .WithMany()
-                        .HasForeignKey("LenguajesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("csharp_apis_cinema.Entidades.Sistema", null)
-                        .WithMany()
-                        .HasForeignKey("SistemasId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -306,13 +276,13 @@ namespace csharp_apis_cinema.Migrations
             modelBuilder.Entity("csharp_apis_cinema.Entidades.SistemaProgramador", b =>
                 {
                     b.HasOne("csharp_apis_cinema.Entidades.Programador", "Programador")
-                        .WithMany("SistemasProgramadores")
+                        .WithMany()
                         .HasForeignKey("ProgramadorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("csharp_apis_cinema.Entidades.Sistema", "Sistema")
-                        .WithMany("SistemasProgramadores")
+                        .WithMany()
                         .HasForeignKey("SistemaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -332,16 +302,6 @@ namespace csharp_apis_cinema.Migrations
                     b.Navigation("Comentarios");
 
                     b.Navigation("PeliculasActores");
-                });
-
-            modelBuilder.Entity("csharp_apis_cinema.Entidades.Programador", b =>
-                {
-                    b.Navigation("SistemasProgramadores");
-                });
-
-            modelBuilder.Entity("csharp_apis_cinema.Entidades.Sistema", b =>
-                {
-                    b.Navigation("SistemasProgramadores");
                 });
 #pragma warning restore 612, 618
         }

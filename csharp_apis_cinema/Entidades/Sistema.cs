@@ -5,7 +5,8 @@
         public int Id { get; set; }
         public string Nombre { get; set; } = null!;
 
-        HashSet<Lenguaje> Lenguajes { get; set; } = new HashSet<Lenguaje>();
-        List<SistemaProgramador> SistemasProgramadores { get; set; } = new List<SistemaProgramador>();
+        public HashSet<Lenguaje> Lenguajes { get; set; } = new HashSet<Lenguaje>();
+        public List<SistemaProgramador> SistemasProgramadores { get; set; } = new 
+            List<SistemaProgramador>();
     }
 }

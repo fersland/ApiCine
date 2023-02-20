@@ -6,7 +6,7 @@
         public string Nombre { get; set; } = null!;
         public int Edad { get; set; }
 
-        List<SistemaProgramador> SistemasProgramadores { get; set; } = new List<SistemaProgramador>();
+        public List<SistemaProgramador> SistemasProgramadores { get; set; } = new List<SistemaProgramador>();
 
     }
 }

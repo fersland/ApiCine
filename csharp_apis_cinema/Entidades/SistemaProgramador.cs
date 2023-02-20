@@ -10,5 +10,6 @@
 
         public string Empresa { get; set; } = null!;
         public decimal Precio { get; set; }
+        public int Orden { get; set; }
     }
 }
