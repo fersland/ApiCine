@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fersl\\Documents\\Visual Studio 2022\\csharp\\apis\\csharp_apis_cinema\\csharp_apis_cinema\\csharp_apis_cinema.csproj": {}
+    "C:\\Users\\fersl\\Documents\\GitHub\\ApiCine\\csharp_apis_cinema\\csharp_apis_cinema.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fersl\\Documents\\Visual Studio 2022\\csharp\\apis\\csharp_apis_cinema\\csharp_apis_cinema\\csharp_apis_cinema.csproj": {
+    "C:\\Users\\fersl\\Documents\\GitHub\\ApiCine\\csharp_apis_cinema\\csharp_apis_cinema.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fersl\\Documents\\Visual Studio 2022\\csharp\\apis\\csharp_apis_cinema\\csharp_apis_cinema\\csharp_apis_cinema.csproj",
+        "projectUniqueName": "C:\\Users\\fersl\\Documents\\GitHub\\ApiCine\\csharp_apis_cinema\\csharp_apis_cinema.csproj",
         "projectName": "csharp_apis_cinema",
-        "projectPath": "C:\\Users\\fersl\\Documents\\Visual Studio 2022\\csharp\\apis\\csharp_apis_cinema\\csharp_apis_cinema\\csharp_apis_cinema.csproj",
+        "projectPath": "C:\\Users\\fersl\\Documents\\GitHub\\ApiCine\\csharp_apis_cinema\\csharp_apis_cinema.csproj",
         "packagesPath": "C:\\Users\\fersl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fersl\\Documents\\Visual Studio 2022\\csharp\\apis\\csharp_apis_cinema\\csharp_apis_cinema\\obj\\",
+        "outputPath": "C:\\Users\\fersl\\Documents\\GitHub\\ApiCine\\csharp_apis_cinema\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

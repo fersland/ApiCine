@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ypwduNlteMxgOy0QV3205y6MRbFN2rd4XaR/3Vw3oo2LPB7sjx9E0c2+V6tDz5rAkFPDfAhTKDzbKmiCUaCMeQ==",
+  "dgSpecHash": "suwATnuJ51RbN56EVNhh7HINXja0+0FGgpBKKZIGgH0pPi8JTXJOZ0NnuoMTp0dRAvYRPBikUivWIKf8RqP9Pg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fersl\\Documents\\Visual Studio 2022\\csharp\\apis\\csharp_apis_cinema\\csharp_apis_cinema\\csharp_apis_cinema.csproj",
+  "projectFilePath": "C:\\Users\\fersl\\Documents\\GitHub\\ApiCine\\csharp_apis_cinema\\csharp_apis_cinema.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fersl\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\fersl\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

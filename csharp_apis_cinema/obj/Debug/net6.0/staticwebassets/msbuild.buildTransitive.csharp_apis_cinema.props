@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\csharp_apis_cinema.props" />
+</Project>
